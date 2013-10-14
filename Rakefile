@@ -1,4 +1,4 @@
-task :default => :defjec
+task :default => :defejec
 
 desc "Ejecución simple"
 task :defejec do
