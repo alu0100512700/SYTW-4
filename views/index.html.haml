@@ -2,10 +2,34 @@
 	%head
 		%meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
 		%title Rock, Paper, Scissors
+		%link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+		:css
+			body {
+				padding-top: 60px;
+			}
+				%link{:href => "../assets/css/bootstrap-reponsive.css", :rel => "stylesheet"}
 	%body
-		%center
-			%h1 Rock, Paper, Scissors
-			%p
-				Choose a throw:
-				= choose
-			%p= answer
+		.navbar.navbar-inverse.navbar-fixed-top
+			.navbar-inner
+				.container
+					%button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.brand{:href => "#"} Rock, Paper, Scissors
+					.nav-collapse.collapse
+						%ul.nav
+							%li.active
+								%a{:href => "#"} Home
+							%li
+								%a{:href => "#help"} Help
+							%li
+								%a{:href => "#about"} About
+		.container
+			%center
+				%h1 Rock, Paper, Scissors
+				%p
+					Choose a throw:
+					= choose
+				%p=answer
+		%script{:src => "/js/bootstrap.js"}
