@@ -29,12 +29,13 @@
 		.container
 			%center
 				%h1 Rock, Paper, Scissors
-				%p Choose a throw:
+				%p 
+					Choose a throw:
 					.col-sm-4.md-3
 						%a(href="/?choice=rock" class="thumbnail")
 							Rock 
-							%img(src="/public/img/piedra.jpg" alt="Rock" height="100" width="135px" style="display: block;    ")
+							%img(src="/public/img/rock.jpg" alt="Rock" height="100" width="135px" style="display: block;    ")
 
 
-				%p=answer
+					%p=answer
 		%script{:src => "/js/bootstrap.js"}
