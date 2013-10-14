@@ -31,10 +31,14 @@
 				%h1 Rock, Paper, Scissors
 				%p 
 					Choose a throw:
-					.col-sm-4.md-3
+					.col-sm-5.md-4
 						%a(href="/?choice=rock" class="thumbnail")
 							Rock 
-							%img(src="/public/img/rock.jpg" alt="Rock" height="100" width="135px" style="display: block;    ")
+							%img(src="/public/img/rock.jpg" alt="Rock" height="100" width="140px" style="display: block;    ")
+					.col-sm-5.md-4
+						%a(href="/?choice=scissors" class="thumbail")
+							Scissors
+							%img(src="/public/img/scissors.jpg" alt="Scissors" height="100" width="140px" style="display: block; ")
 
 
 					%p=answer
