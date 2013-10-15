@@ -7,13 +7,21 @@
 		:css
 			body {
 				padding-top: 60px;
+				background-color: #B4FBFA;
 			}
-				%link{:href => "public/css/bootstrap-reponsive.css", :rel => "stylesheet"}/
+
+			.textores {
+					margin-top: 170px;	
+					font-style:italic;
+					font-size: 200%;
+					color: red;
+				}
+					%link{:href => "public/css/bootstrap-responsive.css", :rel => "stylesheet"}/
 	%body
-		.navbar.navbar-inverse.navbar-fixed-top
+		.navbar.navbar-fixed-top.navbar-inverse
 			.navbar-inner
 				.container
-					%button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+					%button.btn.btn-navbar{"data-toggle"=>"collapse","data-target"=>".nav-collapse",:type=>"button"}
 						%span.icon-bar
 						%span.icon-bar
 						%span.icon-bar
@@ -26,18 +34,21 @@
 								%a{:href => "#help"} Help
 							%li
 								%a{:href => "#about"} About
+					/ /.nav-collapse
 		.container
 			%center
 				%h1 Rock, Paper, Scissors
-				%p
-					Choose a throw:
-					.col-sm-4.md-4
-						%a(href="/?choice=rock" class="thumbnail") 
-							%img(src="/public/img/rock.jpg" alt="Rock" height="100" width="140px" style="display: block")
-					.col-sm-4.md-4
-						%a(href="/?choice=scissors" class="thumbnail")
-							%img(src="/public/img/scissors.jpg" alt="Scissors" height="100" width="140px" style="display: block")
-
-
-					%p=answer
-		%script{:src => "/js/bootstrap.js"}
+				%h2 Choose a throw:
+				.col-sm-4.md-4
+					%a(href="/?choice=rock" class="thumbail") 
+						%img(src="/public/img/rock.jpg" alt="Rock" height="140" width="180px" style="display: block")
+				.col-sm-4.md-4
+					%a(href="/?choice=paper" class="thumbail")
+						%img(src="/public/img/paper.jpg" alt="Paper" height="140" width="180px" style="display: block")
+				.col-sm-4.md-4
+					%a(href="/?choice=scissors" class="thumbail")
+						%img(src="/public/img/scissors.jpg" alt="Scissors" height="140" width="180px" style="display: block")
+				.textores		
+					%center
+						%p=answer
+		%script{:src => "public/js/bootstrap.js"}
