@@ -16,25 +16,41 @@
 					font-size: 200%;
 					color: red;
 				}
+
+			.titlebar {
+					font-style:bold;
+					font-size: 300%;
+					color: blue;
+				}
+
+			.footer	{
+					height: 60px;
+					bottom: -5px;
+					height: 50px;
+					left: 0;
+					position: absolute;
+					right: 0;
+				}
+
+			.containerfoot {
+					background-color: black;
+					height: 50px;
+					padding-right: 20px;
+				}
+			
+			.textofoot {
+					font-style:bold;
+					font-size: 200%;
+					color:blue;
+				}
 		%link{:href => "public/css/bootstrap-responsive.css", :rel => "stylesheet"}/
 	%body
 		.navbar.navbar-fixed-top.navbar-inverse
 			.navbar-inner
-				.container
-					%button.btn.btn-navbar{"data-toggle"=>"collapse","data-target"=>".nav-collapse",:type=>"button"}
-						%span.icon-bar
-						%span.icon-bar
-						%span.icon-bar
-					%a.brand{:href => "#"} Rock, Paper, Scissors
-					.nav-collapse.collapse
-						%ul.nav
-							%li.active
-								%a{:href => "#"} Home
-							%li
-								%a{:href => "#help"} Help
-							%li
-								%a{:href => "#about"} About
-					/ /.nav-collapse
+				.container 
+					.titlebar
+						%a.brand{:href => "/"} 
+							%b Rock, Paper, Scissors
 		.container
 			%center
 				%h1 Rock, Paper, Scissors
@@ -51,4 +67,10 @@
 				.textores		
 					%center
 						%p=answer
+			.footer
+				.containerfoot
+					.textofoot
+						%div(align="right")
+							%a.brand{:href => "https://github.com/alu0100512700/SYTW-4"}
+								%u Github Repository
 		%script{:src => "public/js/bootstrap.js"}
